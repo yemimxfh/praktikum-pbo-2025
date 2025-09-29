@@ -1,0 +1,22 @@
+Perhitungan Free Space Management (Disk 1 TB, Block 2 KB, 32-bit block number, disk half full)
+
+Jumlah total block di disk:
+1000000000000 / 2048 = 488,281,250 block
+
+Jumlah free block (disk half full):
+244,140,625 block
+
+====================================================
+a) Linked List (Fig 4-22a)
+- 1 blok dapat simpan 512 nomor blok
+- Dikurangi 1 slot pointer → 511 nomor blok per linked list block
+- Total free block: 244,140,625
+- Total blok linked list yang diperlukan: 477,771 blok
+- Persentase terhadap kapasitas disk: 0.097848%
+
+====================================================
+b) Bitmap (Fig 4-22b)
+- 1 bit per block → 488,281,250 bit
+- Total ukuran bitmap: 61,035,157 byte
+- Jumlah blok yang dipakai bitmap: 29,803 blok
+- Persentase terhadap kapasitas disk: 0.006104%
